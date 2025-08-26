@@ -1,6 +1,7 @@
 import "./Main.css";
 import React from "react";
 import { assets } from "../../assets/assets.js";
+
 import { useState } from "react";
 
 
@@ -10,7 +11,7 @@ const Main = () => {
     <div className="main">
         <div className="nav">
             <p>Gemini</p>
-            <img src={assets.user_icon}></img>
+            <img src={assets.user}></img>
 
         </div>
         <div className="main-container">
@@ -48,6 +49,25 @@ const Main = () => {
           </div>
 
 
+
+<div className="main-bottom">
+  <div className="search-box">
+    <input placeholder="Enter a prompt here" type="text"></input>
+    <div>
+      <img src={assets.gallery_icon}></img>
+       <img src={assets.mic_icon}></img>
+       <img src={assets.send_icon}></img>
+
+    </div>
+
+
+  </div>
+  <p className="bottom-info">
+    Gemini may display inaccurate info,including about people,so double check its responses. Your privacy and Gemini Apps 
+  </p>
+
+
+</div>
 
             
 

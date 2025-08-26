@@ -9,6 +9,7 @@
 
 .sidebar img{
     width:20px;
+  
 
 }
 .sidebar .menu{
@@ -54,7 +55,7 @@
     align-items: start;
     gap:10px;
     padding:15px;
-    padding-right:40px;
+    padding-right:20px;
     border-radius: 50px;
     cursor:pointer;
     color:#282828;
