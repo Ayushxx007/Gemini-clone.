@@ -179,6 +179,8 @@ align-items: center;
     padding:0px 5%;
     max-height:70vh;
     overflow-y:scroll;
+      scrollbar-width: none;
+  
 
 
   }
@@ -223,10 +225,38 @@ align-items: center;
     background:linear-gradient(to right,#9ed7ff,#ffffff,#9ed7ff);
     background-size:800px 50px;
     height:15px;
+    animation:loader 3s infinite linear;
     
 
 
   }
+
+  @keyframes loader {
+    0%{
+      background-position:-800px 0px;
+
+
+    }
+    100%{
+       background-position:800px 0px;
+
+
+
+    }
+
+
+  }
+
+  .result-data p{
+    font-size:17px;
+    font-weight:300;
+    line-height:1.8;
+
+
+
+  }
+
+  
 
 
 
