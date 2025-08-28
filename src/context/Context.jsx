@@ -20,15 +20,31 @@ export default function ContextProvider({ children }) {
 
     }
 
+    const newChat=()=>{
+      setLoading(false);
+      setShowResult(false);
+    }
+
+
+
 
     const onSent=async(prompt)=>{
 
         setResultData("");
         setLoading(true);
         setShowResult(true);
-        setRecentPrompt(input);
-        setPrevPrompt(prev=>[...prev,input]);
-        const response=await main(input);
+        let response;
+        if(prompt!==undefined){
+          response=await main(prompt);
+           setRecentPrompt(prompt);
+        }else{
+            setPrevPrompt(prev=>[...prev,input]);
+             setRecentPrompt(input);
+              response=await main(input);
+
+        }
+    
+         
         let responseArray=response.split("**");
         let newResponse="";
         for(let i=0;i<responseArray.length;i++){
@@ -66,7 +82,7 @@ export default function ContextProvider({ children }) {
     onSent,input,setInput,recentPrompt,
     setRecentPrompt,prevPrompt,setPrevPrompt,
     showResult,setShowResult,loading,setLoading,
-    resultData,setResultData
+    resultData,setResultData,newChat
     
 
   } 
